@@ -22,7 +22,7 @@ class TasksBase
 
     public function findById($task, $params = array(), $options = array())
     {
-        $path = sprintf("/tasks/%d", $task);
+        $path = sprintf("/tasks/%s", $task);
         return $this->client->get($path, $params, $options);
     }
 
